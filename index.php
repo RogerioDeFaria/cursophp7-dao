@@ -22,9 +22,19 @@
 	//echo json_encode($search);
 
 	// Carrega um usuário usando o login e a senha
-	$usuario = new Usuario();
-	$usuario->login("root", "ab#@e");
+	//$usuario = new Usuario();
+	//$usuario->login("root", "ab#@e");
+	//echo $usuario;
 
+	// Stored procedure - criando um novo usuário
+	//$aluno = new Usuario("aluno", "@lun0");
+	//$aluno->insert();
+	//echo $aluno;
+
+	// Atualizando um usuário
+	$usuario = new Usuario();
+	$usuario->loadById(10);
+	$usuario->update("professor", "!@#$%¨&*");
 	echo $usuario;
 
 ?>
